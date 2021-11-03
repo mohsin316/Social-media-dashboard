@@ -1,0 +1,20 @@
+
+/*
+https://css-tricks.com/snippets/sass/px-to-em-functions/@at-root
+
+basically 
+
+h1{
+    font-size: rem(30);
+
+}
+
+above thing will activate the bottom function and we will get the converted pixels in rem
+
+*/
+
+@use 'sass:math';
+
+@function rem($pixels, $content: 16) {
+    @return  math.div($pixels, $content) * 1rem
+}
